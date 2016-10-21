@@ -31,7 +31,7 @@ Open Chinese Convert (OpenCC, 開放中文轉換) is an opensource project for c
 * [Ubuntu](https://launchpad.net/ubuntu/+source/opencc)
 * [Fedora](https://admin.fedoraproject.org/pkgdb/package/opencc/)
 * [Arch Linux](https://www.archlinux.org/packages/community/x86_64/opencc/)
-* [Mac OS](https://github.com/mxcl/homebrew/blob/master/Library/Formula/opencc.rb)
+* [Mac OS](https://github.com/Homebrew/homebrew-core/blob/master/Formula/opencc.rb)
 * [Node.js](https://npmjs.org/package/opencc)
 
 ## Download 下載
@@ -84,15 +84,15 @@ sudo make PREFIX=/usr/local install
 Windows MSYS:
 
 ```
-cmake .. -G "MSYS Makefiles" -DCMAKE_INSTALL_PREFIX="" -DCMAKE_BUILD_TYPE=Release
-make
+cmake -H. -Bbuild -G "MSYS Makefiles" -DCMAKE_INSTALL_PREFIX="path/to/install"
+cmake --build build --config Release --target install
 ```
 
 Windows Visual Studio (2013 or higher required):
 
 ```
-cmake .. -G "Visual Studio 12" -DCMAKE_INSTALL_PREFIX="" -DCMAKE_BUILD_TYPE=Release
-make
+cmake -H. -Bbuild -G"Visual Studio 12" -DCMAKE_INSTALL_PREFIX="path/to/install"
+cmake --build build --config Release --target install
 ```
 
 ### iOS
